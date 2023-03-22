@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gray;
+        }
+
+        .slider {
+            margin: 12px 3px;
+            padding: 0px 3px;
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            overflow: hidden;
+            /* background-color: aqua; */
+        }
+
+        .slides {
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            align-items: center;
+            justify-content: center;
+            transition: all 10s;
+            
+            /* background-color: green; */
+            animation: slidir 16s ease-in-out 3s infinite;
+        }
+
+        img {
+            height: 300px;
+            width: 400px;
+        }
+
+        @keyframes slidir {
+            0% {
+                /* right: 0; */
+                transition: all 10s;
+                transform: translateX(0px);
+            }
+
+            25% {
+                transition: all 10s;
+                transform: translateX(-400px);
+
+            }
+
+            50% {
+
+                transform: translateX(-800px);
+                transition: all 10s;
+            }
+
+            75% {
+                transform: translateX(-1200px);
+                transition: all 10s;
+            }
+
+            100% {
+                transform: translateX(0px);
+                transition: all 10s;
+            }
+
+        }
+        
+        @media screen and (min-width:750px) and (max-width:1500px)  {
+
+        img {
+            height: 500px;
+            width: 1300px;
+        }
+        .slides {
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            align-items: center;
+            justify-content: center;
+            transition: all 10s;
+            
+            /* background-color: green; */
+            animation: slider 16s ease-in-out 3s infinite;
+        }
+
+        @keyframes slider {
+            0% {
+                /* right: 0; */
+                transition: all 10s;
+                transform: translateX(0px);
+            }
+
+            25% {
+                transition: all 10s;
+                transform: translateX(-1300px);
+
+            }
+
+            50% {
+
+                transform: translateX(-2600px);
+                transition: all 10s;
+            }
+
+            75% {
+                transform: translateX(-3900px);
+                transition: all 10s;
+            }
+
+            100% {
+                transform: translateX(0px);
+                transition: all 10s;
+            }
+
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="divider"></div> -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide1">
+                    <img src="./01.jpg" alt="">
+                </div>
+                <div class="slide2">
+                    <img src="./02.jpg" alt="">
+                </div>
+                <div class="slide3">
+                    <img src="./03.jpg" alt="">
+                </div>
+                <div class="slide4">
+                    <img src="./04.jpg" alt="">
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
